@@ -29,14 +29,21 @@ Main files:
 .
 ├── README.MD                             <-- Instructions file.
 ├── package.json                          <-- NodeJS dependencies and scripts for SAM project.
+├── Config                                <-- Config file created by code.amazon.com.
 ├── Images                                <-- Folder containing images for this readme.                                 
-│   └── connect.png                       <-- Amazon connect call flow image.
-│   └── LexSlot.png                       <-- Amazon Lex image.
-│   └── DynamoDBStreams.png               <-- DB Stream processing flow image.                                 
-│   └── customLex.png                     <-- Architecture diagram for this project.                                           
+│   └── logfile.png                       <-- Log file image.
+│   └── loggingBehavior.png               <-- Setting logging behavior image.
+│   └── logs.png                          <-- logs in the log file image.                                 
+│   └── setANI.png                        <-- Set ANI in set contact attribute image.
+│   └── Setcontactattributes.png          <-- Set contact attribute block image.                                 
+│   └── setLoggingBehavior.png            <-- Set logging behavior block image.
+│   └── tableoutput.png                   <-- cli table output image.                                        
 ├── src                                   <-- Folder containing all lambda functions for this project.
 │   └── index.js                          <-- Main module, start of execution.                                           
 │   └── Cloudwatch.js                     <-- Module that exposes 2 methods to get the contactID and get the logs.
+│   └── middleware                        <-- Folder that contains middleware.
+│     └── logger                          <-- Folder that contains the logger middleware.
+│        └── winston.js                       <-- Winston logger javascript.
  
 
 ```
@@ -64,7 +71,13 @@ Main files:
       git clone ssh://git.amazon.com/pkg/Amazon-connect-lex-autoUpdate
    ```
 
-* Step 3: Get the contactId's and select the one you want to get the logs for:
+* Step 3: Install npm dependencies
+   * From the terminal at root, run the below command
+   ```bash
+      npm i
+   ```
+
+* Step 4: Get the contactId's and select the one you want to get the logs for:
    * From the root directory in terminal run the below command:
    ```bash
       node ./src/index.js get-id --name='<connect-instance-name>' --ani='<customer number>' --date='<date>'
@@ -79,7 +92,7 @@ Main files:
    
    ![output table](./images/tableoutput.png)
  
-* Step 4: Get the logs for a specific contactId
+* Step 5: Get the logs for a specific contactId
    *  From the root directory in terminal run the below command:
    ```bash
       node ./src/index.js get-log --name='<connect-instance-name>' --id='<contactID selected from the previous run of get-id command>'
