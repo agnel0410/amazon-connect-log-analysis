@@ -67,13 +67,13 @@ Main files:
 * Step 3: Get the contactId's and select the one you want to get the logs for:
    * From the root directory in terminal run the below command:
    ```bash
-      node ./index.js get-id --name='<connect-instance-name>' --ani='<customer number>' --date='<date>'
+      node ./src/index.js get-id --name='<connect-instance-name>' --ani='<customer number>' --date='<date>'
    ```
       `--date ==> should be in this format: '2019/09/25'`
 
       `--ani ==> should be in this format: '+14792680365'`
 
-   ***Eg: node ./index.js get-id --name='someConnectInstanceName' --ani='+14792680365' --date='2019/09/25'***
+   ***Eg: node ./src/index.js get-id --name='someConnectInstanceName' --ani='+14792680365' --date='2019/09/25'***
 
    * This command will display the lists of retrieved `timestamp`, `contactID` and the `ANI` in a table format in your terminal.
    
@@ -82,9 +82,9 @@ Main files:
 * Step 4: Get the logs for a specific contactId
    *  From the root directory in terminal run the below command:
    ```bash
-      node ./index.js get-log --name='<connect-instance-name>' --id='<contactID selected from the previous run of get-id command>'
+      node ./src/index.js get-log --name='<connect-instance-name>' --id='<contactID selected from the previous run of get-id command>'
    ```
-   ***Eg: node ./index.js get-log --name='someConnectInstanceName' --id='9c7ff421-bcec-4ee7-a2e7-c8a2a870fb1e'***
+   ***Eg: node ./src/index.js get-log --name='someConnectInstanceName' --id='9c7ff421-bcec-4ee7-a2e7-c8a2a870fb1e'***
 
    *  You will be able to find the log file in your root, under /logs/`<contactId>`.log
 
