@@ -1,4 +1,4 @@
-# Amazon Lex - Auto Updates - SlotType
+# Amazon connect - log analysis locally
 
 Use Amazon Web Services (AWS) cloudwatch API and amazon connect.
 
