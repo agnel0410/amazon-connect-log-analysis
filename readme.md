@@ -67,18 +67,21 @@ Main files:
 
 * Step 2: Clone the repo
    * From the terminal, clone the repo from code.amazon.com
-   ```bash
-      git clone ssh://git.amazon.com/pkg/Amazon-connect-lex-autoUpdate
-   ```
-
+      ```bash
+         git clone ssh://git.amazon.com/pkg/Amazon-connect-log-analysis
+      ```
+* Step 3: Change the directory to the newly created 'Amazon-connect-log-analysis'
+      ```bash
+         cd Amazon-connect-log-analysis
+      ```
 * Step 3: Install npm dependencies
    * From the terminal at root, run the below command
-   ```bash
-      npm i
-   ```
+      ```bash
+         npm i
+      ```
 
 * Step 4: Get the contactId's and select the one you want to get the logs for:
-   * From the root directory in terminal run the below command:
+   * From the terminal at root, run the below command:
    ```bash
       node ./src/index.js get-id --name='<connect-instance-name>' --ani='<customer number>' --date='<date>'
    ```
