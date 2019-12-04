@@ -1,0 +1,4 @@
+{
+    "browser-preview.chromeExecutable": "http://localhost:4200",
+    "browser-preview.verbose": true
+}

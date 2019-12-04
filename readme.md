@@ -19,6 +19,7 @@ This app is used to get the 'contactID' for the test calls you made to a contact
    10. If command 'get-log' then cloudwatch API is invoked to get the logs and store the log file locally in the root directory './logs/<contactId>.log' using library 'winston'.
 
 ## Prerequisites
+* [AWS CLI installed and configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 * [NodeJS 10.x](https://nodejs.org/en/download/)
 
 ## Repository content
@@ -65,22 +66,26 @@ Main files:
 
 **PLEASE NOTE:** Step 1 is very important and without this the program will not work!!!
 
-* Step 2: Clone the repo
+* Step 2: Configure the account to use where you have created your connect instance is running
+   * When you run this nodejs app by default 'aws-sdk' will use the default profile configured for AWS CLI.If your connect instance is running on a different account then create an IAM user for that account with programmatic access and add a new named profile in ~/.aws/credentials with the access key and secret.Follow the below link to perform these actions.
+   * [Follow this link on how to set up named profile for AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
+
+* Step 3: Clone the repo
    * From the terminal, clone the repo from code.amazon.com
       ```bash
          git clone ssh://git.amazon.com/pkg/Amazon-connect-log-analysis
       ```
-* Step 3: Change the directory to the newly created 'Amazon-connect-log-analysis'
+* Step 4: Change the directory to the newly created 'Amazon-connect-log-analysis'
       ```bash
          cd Amazon-connect-log-analysis
       ```
-* Step 4: Install npm dependencies
+* Step 5: Install npm dependencies
    * From the terminal at root, run the below command
       ```bash
          npm i
       ```
 
-* Step 5: Get the contactId's and select the one you want to get the logs for:
+* Step 6: Get the contactId's and select the one you want to get the logs for:
    * From the terminal at root, run the below command:
       ```bash
          node ./src/index.js get-id --name='<connect-instance-name>' --ani='<customer number>' --date='<date>'
@@ -95,7 +100,7 @@ Main files:
    
    ![output table](./images/tableoutput.png)
  
-* Step 6: Get the logs for a specific contactId
+* Step 7: Get the logs for a specific contactId
    *  From the root directory in terminal run the below command:
       ```bash
          node ./src/index.js get-log --name='<connect-instance-name>' --id='<contactID selected from the previous run of get-id command>'

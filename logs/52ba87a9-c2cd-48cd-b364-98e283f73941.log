@@ -1,0 +1,60 @@
+2019-09-25T02:55:49.760Z [SetLoggingBehavior]: {
+    "ContactId": "52ba87a9-c2cd-48cd-b364-98e283f73941",
+    "ContactFlowId": "arn:aws:connect:us-east-1:329856991767:instance/9bb5ccc2-8693-48bc-b3d2-1b726a71c349/contact-flow/bf9f303a-4c0a-4950-afd0-9223abfd417a",
+    "ContactFlowModuleType": "SetLoggingBehavior",
+    "Timestamp": "2019-09-25T02:55:49.760Z",
+    "Parameters": {
+        "LoggingBehavior": "Enable"
+    }
+}
+2019-09-25T02:55:49.761Z [SetAttributes]: {
+    "ContactId": "52ba87a9-c2cd-48cd-b364-98e283f73941",
+    "ContactFlowId": "arn:aws:connect:us-east-1:329856991767:instance/9bb5ccc2-8693-48bc-b3d2-1b726a71c349/contact-flow/bf9f303a-4c0a-4950-afd0-9223abfd417a",
+    "ContactFlowModuleType": "SetAttributes",
+    "Timestamp": "2019-09-25T02:55:49.761Z",
+    "Parameters": {
+        "Value": "+14792680365",
+        "Key": "ANI"
+    }
+}
+2019-09-25T02:55:49.762Z [GetUserInput]: {
+    "ContactId": "52ba87a9-c2cd-48cd-b364-98e283f73941",
+    "ContactFlowId": "arn:aws:connect:us-east-1:329856991767:instance/9bb5ccc2-8693-48bc-b3d2-1b726a71c349/contact-flow/bf9f303a-4c0a-4950-afd0-9223abfd417a",
+    "ContactFlowModuleType": "GetUserInput",
+    "Timestamp": "2019-09-25T02:55:49.762Z",
+    "Parameters": {
+        "TextToSpeechType": "text",
+        "NoInputTimeout": "3000",
+        "BotAlias": "$LATEST",
+        "Text": "Please speak the last name of the doctor or the provider you want to be connected with.",
+        "BotRegion": "us-east-1",
+        "Voice": "Joanna",
+        "BotName": "GetLastNameBot",
+        "MaxSpeechDuration": "12000"
+    }
+}
+2019-09-25T02:56:16.395Z [GetUserInput]: {
+    "Results": "Error",
+    "ContactId": "52ba87a9-c2cd-48cd-b364-98e283f73941",
+    "ContactFlowId": "arn:aws:connect:us-east-1:329856991767:instance/9bb5ccc2-8693-48bc-b3d2-1b726a71c349/contact-flow/bf9f303a-4c0a-4950-afd0-9223abfd417a",
+    "ContactFlowModuleType": "GetUserInput",
+    "Timestamp": "2019-09-25T02:56:16.395Z"
+}
+2019-09-25T02:56:16.442Z [PlayPrompt]: {
+    "ContactId": "52ba87a9-c2cd-48cd-b364-98e283f73941",
+    "ContactFlowId": "arn:aws:connect:us-east-1:329856991767:instance/9bb5ccc2-8693-48bc-b3d2-1b726a71c349/contact-flow/bf9f303a-4c0a-4950-afd0-9223abfd417a",
+    "ContactFlowModuleType": "PlayPrompt",
+    "Timestamp": "2019-09-25T02:56:16.442Z",
+    "Parameters": {
+        "TextToSpeechType": "text",
+        "Text": "There was a problem! Please call us back.",
+        "Voice": "Joanna"
+    }
+}
+2019-09-25T02:56:18.995Z [Disconnect]: {
+    "ContactId": "52ba87a9-c2cd-48cd-b364-98e283f73941",
+    "ContactFlowId": "arn:aws:connect:us-east-1:329856991767:instance/9bb5ccc2-8693-48bc-b3d2-1b726a71c349/contact-flow/bf9f303a-4c0a-4950-afd0-9223abfd417a",
+    "ContactFlowModuleType": "Disconnect",
+    "Timestamp": "2019-09-25T02:56:18.995Z",
+    "Parameters": {}
+}

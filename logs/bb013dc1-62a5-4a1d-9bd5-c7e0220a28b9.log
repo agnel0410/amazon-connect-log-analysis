@@ -1,0 +1,81 @@
+2019-10-01T15:18:37.047Z [SetLoggingBehavior]: {
+    "ContactId": "bb013dc1-62a5-4a1d-9bd5-c7e0220a28b9",
+    "ContactFlowId": "arn:aws:connect:us-east-1:089387931949:instance/82e11ce9-2831-4b43-8961-f304e3746d09/contact-flow/91ee0364-9b78-453d-9203-5b84084b8abe",
+    "ContactFlowModuleType": "SetLoggingBehavior",
+    "Timestamp": "2019-10-01T15:18:37.047Z",
+    "Parameters": {
+        "LoggingBehavior": "Enable"
+    }
+}
+2019-10-01T15:18:37.048Z [SetAttributes]: {
+    "ContactId": "bb013dc1-62a5-4a1d-9bd5-c7e0220a28b9",
+    "ContactFlowId": "arn:aws:connect:us-east-1:089387931949:instance/82e11ce9-2831-4b43-8961-f304e3746d09/contact-flow/91ee0364-9b78-453d-9203-5b84084b8abe",
+    "ContactFlowModuleType": "SetAttributes",
+    "Timestamp": "2019-10-01T15:18:37.048Z",
+    "Parameters": {
+        "Value": "+14792680365",
+        "Key": "ANI"
+    }
+}
+2019-10-01T15:18:37.050Z [GetUserInput]: {
+    "ContactId": "bb013dc1-62a5-4a1d-9bd5-c7e0220a28b9",
+    "ContactFlowId": "arn:aws:connect:us-east-1:089387931949:instance/82e11ce9-2831-4b43-8961-f304e3746d09/contact-flow/91ee0364-9b78-453d-9203-5b84084b8abe",
+    "ContactFlowModuleType": "GetUserInput",
+    "Timestamp": "2019-10-01T15:18:37.050Z",
+    "Parameters": {
+        "TextToSpeechType": "ssml",
+        "NoInputTimeout": "3000",
+        "BotAlias": "$LATEST",
+        "Text": "<speak><amazon:auto-breaths>Hi,<amazon:breath/> Welcome to Oklahoma state university. <break time=\"250ms\"/> Ask me a question</amazon:auto-breaths></speak>",
+        "Voice": "Joanna",
+        "BotRegion": "us-east-1",
+        "BotName": "QnABot_Sample_BotKX",
+        "MaxSpeechDuration": "12000"
+    }
+}
+2019-10-01T15:19:03.142Z [GetUserInput]: {
+    "Results": "Fulfilment_intentqxywgdm",
+    "ContactId": "bb013dc1-62a5-4a1d-9bd5-c7e0220a28b9",
+    "ContactFlowId": "arn:aws:connect:us-east-1:089387931949:instance/82e11ce9-2831-4b43-8961-f304e3746d09/contact-flow/91ee0364-9b78-453d-9203-5b84084b8abe",
+    "ContactFlowModuleType": "GetUserInput",
+    "Timestamp": "2019-10-01T15:19:03.142Z"
+}
+2019-10-01T15:19:03.200Z [GetUserInput]: {
+    "ContactId": "bb013dc1-62a5-4a1d-9bd5-c7e0220a28b9",
+    "ContactFlowId": "arn:aws:connect:us-east-1:089387931949:instance/82e11ce9-2831-4b43-8961-f304e3746d09/contact-flow/91ee0364-9b78-453d-9203-5b84084b8abe",
+    "ContactFlowModuleType": "GetUserInput",
+    "Timestamp": "2019-10-01T15:19:03.200Z",
+    "Parameters": {
+        "TextToSpeechType": "text",
+        "NoInputTimeout": "3000",
+        "BotAlias": "$LATEST",
+        "Text": "Did that answer your question? If you have more questions or want to speak with an agent say more questions or Agent.",
+        "BotRegion": "us-east-1",
+        "Voice": "Joanna",
+        "BotName": "ResolveRepeatAgentBot",
+        "MaxSpeechDuration": "12000"
+    }
+}
+2019-10-01T15:19:21.459Z [GetUserInput]: {
+    "Results": "Repeat",
+    "ContactId": "bb013dc1-62a5-4a1d-9bd5-c7e0220a28b9",
+    "ContactFlowId": "arn:aws:connect:us-east-1:089387931949:instance/82e11ce9-2831-4b43-8961-f304e3746d09/contact-flow/91ee0364-9b78-453d-9203-5b84084b8abe",
+    "ContactFlowModuleType": "GetUserInput",
+    "Timestamp": "2019-10-01T15:19:21.459Z"
+}
+2019-10-01T15:19:21.518Z [GetUserInput]: {
+    "ContactId": "bb013dc1-62a5-4a1d-9bd5-c7e0220a28b9",
+    "ContactFlowId": "arn:aws:connect:us-east-1:089387931949:instance/82e11ce9-2831-4b43-8961-f304e3746d09/contact-flow/91ee0364-9b78-453d-9203-5b84084b8abe",
+    "ContactFlowModuleType": "GetUserInput",
+    "Timestamp": "2019-10-01T15:19:21.518Z",
+    "Parameters": {
+        "TextToSpeechType": "text",
+        "NoInputTimeout": "3000",
+        "BotAlias": "$LATEST",
+        "Text": "Ask me a question",
+        "BotRegion": "us-east-1",
+        "Voice": "Joanna",
+        "BotName": "QnABot_Sample_BotKX",
+        "MaxSpeechDuration": "12000"
+    }
+}
